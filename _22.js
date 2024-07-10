@@ -6,13 +6,20 @@ function Diamond(n) {
         
         for (let j = 0; j < size; j++) {
             if (j >= Math.abs(n - 1 - i) && j < size - Math.abs(n - 1 - i)) {
-                row += "*";
+                if(i%2==0){
+                    row += "*";  
+                }else{
+                    row += "-";
+                }
+                
             } else {
                 row += " ";
             }
         }
+        
         console.log(row);
     }
 }
 
-Diamond(5);
+
+ Diamond(5);
